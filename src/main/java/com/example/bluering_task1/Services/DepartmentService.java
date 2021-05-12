@@ -22,4 +22,8 @@ public class DepartmentService {
     public Department getDepartmentByName(String name) {
     	return depRepo.findByDepartmentName(name);
     }
+    public Department getDepartmentById(Long id) {
+    	Department depar= depRepo.findById(id).get();
+    	return depar;
+    }
 }
